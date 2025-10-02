@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Ouahman - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+        }
+        .section-padding {
+            padding: 100px 0;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+        }
+        .contact-input {
+            background-color: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            transition: all 0.3s ease;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+        }
+        .social-link {
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            transform: translateY(-5px);
+            background-color: #8b5cf6;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center hero-bg relative overflow-hidden">
+        <div id="vanta-bg" class="absolute top-0 left-0 w-full h-full"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        <span class="block">Mohammed</span>
+                        <span class="block text-primary">Ouahman</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-gray-300 mb-6">Motivated IT Student & Aspiring Full-Stack Web Developer</h2>
+                    <p class="text-gray-400 mb-8 flex items-center">
+                        <i data-feather="map-pin" class="mr-2 text-secondary"></i>
+                        Casablanca – Bouskoura, Morocco
+                    </p>
+                    <a href="mailto:simofun85@gmail.com" class="inline-flex items-center bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                        <i data-feather="mail" class="mr-2"></i>
+                        Contact Me
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary shadow-2xl">
+                            <img src="http://static.photos/people/640x640/42" alt="Mohammed Ouahman" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-secondary text-white py-2 px-4 rounded-lg shadow-lg">
+                            <p class="font-bold">IT Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-gray-300 mb-6">
+                        I'm a passionate IT student from Casablanca, Morocco, with a strong interest in web development. 
+                        Currently pursuing my studies in Bouskoura, I'm dedicated to mastering both frontend and backend 
+                        technologies to become a proficient full-stack developer.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        My journey in technology is driven by curiosity and a desire to create meaningful digital experiences. 
+                        I'm constantly exploring new frameworks, tools, and methodologies to enhance my skill set.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link bg-slate-800 p-3 rounded-full">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="#" class="social-link bg-slate-800 p-3 rounded-full">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link bg-slate-800 p-3 rounded-full">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-semibold mb-6">My Skills</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>HTML/CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar bg-slate-700">
+                                    <div class="skill-progress bg-primary" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>JavaScript</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar bg-slate-700">
+                                    <div class="skill-progress bg-primary" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>React</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar bg-slate-700">
+                                    <div class="skill-progress bg-primary" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Node.js</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-bar bg-slate-700">
+                                    <div class="skill-progress bg-primary" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce Website</h3>
+                        <p class="text-gray-400 mb-4">A full-featured online shopping platform with payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">React</span>
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/office/640x360/2" alt="Project 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-gray-400 mb-4">A productivity application for managing tasks and team collaboration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Firebase</span>
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/nature/640x360/3" alt="Project 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Weather Dashboard</h3>
+                        <p class="text-gray-400 mb-4">Real-time weather information with forecasting capabilities.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">API</span>
+                            <span class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-6">Let's Talk</h3>
+                    <p class="text-gray-300 mb-8">
+                        I'm currently available for freelance work or full-time positions. 
+                        Feel free to reach out if you want to collaborate or just say hello!
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Email</h4>
+                                <p class="text-gray-400">simofun85@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i data-feather="map-pin" class="text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Location</h4>
+                                <p class="text-gray-400">Casablanca – Bouskoura, Morocco</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i data-feather="globe" class="text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Available</h4>
+                                <p class="text-gray-400">Freelance & Full-time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <form class="bg-slate-800 p-8 rounded-2xl shadow-xl">
+                        <div class="mb-6">
+                            <input type="text" placeholder="Your Name" class="contact-input w-full p-4 rounded-lg text-white">
+                        </div>
+                        <div class="mb-6">
+                            <input type="email" placeholder="Your Email" class="contact-input w-full p-4 rounded-lg text-white">
+                        </div>
+                        <div class="mb-6">
+                            <textarea placeholder="Your Message" rows="5" class="contact-input w-full p-4 rounded-lg text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-slate-800 py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold">
+                        <span class="text-primary">Mohammed</span> Ouahman
+                    </h3>
+                    <p class="text-gray-500 mt-2">Aspiring Full-Stack Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="mailto:simofun85@gmail.com" class="text-gray-400 hover:text-primary transition duration-300">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Mohammed Ouahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Initialize Vanta.js background
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x6366f1,
+            color2: 0x8b5cf6,
+            backgroundColor: 0x0f172a
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
